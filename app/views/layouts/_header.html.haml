@@ -1,0 +1,18 @@
+.ui.large.top.fixed.hidden.menu
+  .ui.container
+    %a.active.item *iHub_ greens
+    %a.item Greens
+    %a.item Developers
+    %a.item About
+    .right.menu
+    -if green_signed_in?
+      .item 
+        =link_to "Account" , edit_green_registration_path 
+      .item
+        =link_to "Sign Out" , destroy_green_session_path, method: :delete ,class: "ui green button"
+
+    -else
+      .item
+        =link_to "Log in" , new_green_session_path , class: "ui green button"
+      .item
+        =link_to  "Sign Up", new_green_registration_path , class: "ui primary button"
