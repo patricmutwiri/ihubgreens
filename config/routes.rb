@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'greens/index'
-  get 'greens/show'
-
   get 'profile/show'
   get 'static/about'
 
@@ -9,6 +6,7 @@ Rails.application.routes.draw do
 
   get 'about' => 'static#about', as: :about
   get 'greens' => 'greens#index', as: :greens
+  get '/greens/:id', :to => 'greens#show', :as => :green 
 
   get 'profile' => 'static#show', as: :profile
   # The priority is based upon order of creation: first created -> highest priority.

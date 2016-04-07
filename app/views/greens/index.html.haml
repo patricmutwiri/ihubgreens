@@ -1,2 +1,13 @@
-%h1 Greens#index
-%p Find me in app/views/greens/index.html.haml
+.ui
+  %h1 Greens#index
+  %p Find me in app/views/greens/index.html.haml
+
+  - @greens.each do |green|
+  
+    %tr
+      %td= link_to (image_tag green.avatar.url(:thumb)), green
+      %td= green.username
+      %td= green.email
+
+
+
