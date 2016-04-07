@@ -1,0 +1,22 @@
+%p#notice= notice
+%p
+  = image_tag @startup.image.url(:medium)
+%p
+  %b Name:
+  = @startup.name
+%p
+  %b Founded:
+  = @startup.founded
+%p
+  %b Employees:
+  = @startup.employees
+%p
+  %b Days at ihub:
+  = @startup.days_at_ihub
+%p
+  %b About:
+  = @startup.about
+
+= link_to 'Edit', edit_startup_path(@startup)
+\|
+= link_to 'Back', startups_path

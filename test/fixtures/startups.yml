@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  founded: 2016-04-07
+  employees: 1
+  days_at_ihub: 1
+  about: MyText
+
+two:
+  name: MyString
+  founded: 2016-04-07
+  employees: 1
+  days_at_ihub: 1
+  about: MyText

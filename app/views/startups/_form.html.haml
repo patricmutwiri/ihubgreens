@@ -1,0 +1,28 @@
+= form_for @startup, url: greens_path, html: { multipart: true } do |f|
+  - if @startup.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@startup.errors.count, "error")} prohibited this startup from being saved:"
+      %ul
+        - @startup.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = image_tag @startup.image.url(:medium)
+    %br/
+    = f.file_field :image
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :founded
+    = f.date_select :founded
+  .field
+    = f.label :employees
+    = f.number_field :employees
+  .field
+    = f.label :days_at_ihub
+    = f.number_field :days_at_ihub
+  .field
+    = f.label :about
+    = f.text_area :about
+  .actions
+    = f.submit 'Save'

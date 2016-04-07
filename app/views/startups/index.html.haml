@@ -1,0 +1,18 @@
+%h1 Listing startups
+
+%table
+  %thead
+    %tr
+      %th Name
+      
+
+  %tbody
+    - @startups.each do |startup|
+      %tr
+        %td= link_to (image_tag startup.image.url(:medium)), startup
+        %td= startup.name
+        
+
+%br
+
+= link_to 'New Startup', new_startup_path

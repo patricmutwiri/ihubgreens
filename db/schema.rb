@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160407193308) do
+ActiveRecord::Schema.define(version: 20160407202947) do
 
   create_table "greens", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -31,10 +31,33 @@ ActiveRecord::Schema.define(version: 20160407193308) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.text     "about"
+    t.string   "quote"
   end
 
   add_index "greens", ["email"], name: "index_greens_on_email", unique: true
   add_index "greens", ["reset_password_token"], name: "index_greens_on_reset_password_token", unique: true
   add_index "greens", ["username"], name: "index_greens_on_username", unique: true
+
+  create_table "industries", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "startups", force: :cascade do |t|
+    t.string   "name"
+    t.date     "founded"
+    t.integer  "employees"
+    t.integer  "days_at_ihub"
+    t.text     "about"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
 
 end
