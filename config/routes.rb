@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
+  get 'greens/index'
+  get 'greens/show'
+
   get 'profile/show'
-
   get 'static/about'
-
-  get 'home/index'
 
   devise_for :greens
 
   get 'about' => 'static#about', as: :about
-  get 'greens' => 'static#greens', as: :greens
+  get 'greens' => 'greens#index', as: :greens
 
   get 'profile' => 'static#show', as: :profile
   # The priority is based upon order of creation: first created -> highest priority.
