@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160330194209) do
+ActiveRecord::Schema.define(version: 20160407174819) do
 
   create_table "greens", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -30,9 +30,11 @@ ActiveRecord::Schema.define(version: 20160330194209) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "username"
   end
 
   add_index "greens", ["email"], name: "index_greens_on_email", unique: true
   add_index "greens", ["reset_password_token"], name: "index_greens_on_reset_password_token", unique: true
+  add_index "greens", ["username"], name: "index_greens_on_username", unique: true
 
 end
