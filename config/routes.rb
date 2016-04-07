@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'static/about'
+
   get 'home/index'
 
   devise_for :greens
