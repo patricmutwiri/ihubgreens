@@ -4,26 +4,42 @@
 		margin-top: 5em;
 	}
 
-
 .top
 	.ui.container
+		= @green.to_json
 		.ui.green.segment
 			.ui.grid
-				.four.wide.column
-					= image_tag ("person-flat.png")
+				.four.wide.column{align: 'center'}
+					= image_tag("person-flat.png", :height => '100')
 
-					%h4 Name: #{current_green.names}
+					%h4 Name: #{@green.names}
 
 				.ui.vertical.divider
 
 				.ten.wide.column
-					%h4 Skills: #{current_green.skills}
-					%br/
-					%h4 Stars: 4.5+
-					%br/
-					%h4 Jobs:
-					%br/
-					%h4 Tag Line:
+					.ui.grid
+						.five.wide.column
+							Skills
+							.ui.tiny.progress
+								.bar
+								.label
+									html
+							.ui.tiny.progress
+								.bar
+								.label
+									css
+
+						.ui.vertical.divider
+
+						.five.wide.column
+							Rating
+							.ui.star.rating{"data-rating" => "4"}
+
+						.ui.vertical.divider
+
+						.five.wide.column
+							Tag Line
+				
 
 
 		%h2 Projects
@@ -40,7 +56,7 @@
 			.extra.content
 				.right.floated.author
 					= image_tag ("person-flat.png"), class: 'ui avatar image'
-					#{current_green.names}
+					-#{current_green.names}
 
 
 
