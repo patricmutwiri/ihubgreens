@@ -12,12 +12,12 @@
 				.four.wide.column
 					= image_tag ("person-flat.png")
 
-					Name:
+					Name: #{current_green.names}
 
 				.ui.vertical.divider
 
 				.ten.wide.column
-					%h4 Skills:
+					%h4 Skills: #{current_green.skills}
 					%br/
 					%h4 Stars:
 					%br/
@@ -40,7 +40,7 @@
 			.extra.content
 				.right.floated.author
 					= image_tag ("person-flat.png"), class: 'ui avatar image'
-					Test User
+					#{current_green.names}
 
 
 
