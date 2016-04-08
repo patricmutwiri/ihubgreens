@@ -4,20 +4,25 @@
 		margin-top: 5em;
 	}
 
-
 .top
-	.ui.container	
+	.ui.container
+		%div{align: 'center'}
+			%span
+				= image_tag("community.gif", :height => '100') 
+			%br/
+			%h3{style: 'font-size: 30px; font-family: ubuntu; color:green;'} Green Members
+
 		.ui.cards
 			- @greens.each do |green|
-				.ui.card
+				.ui.card{:style => "width: 200px"}
 					.content
 						.header
 							= green.names
 						.meta
 							= time_ago_in_words(green.created_at)
 						.description
-							.image
-								= image_tag green.avatar(:medium)
+							.image{:align => "center"}
+								= image_tag green.avatar(:medium), :size => "150x150"
 
 							.extra
 								Rating:
@@ -26,11 +31,8 @@
 							%hr/
 							
 							%p this is the user profile
-						-#.extra
-
-
 					
-					= link_to profile_show_path do
+					= link_to controller: "profile", action: "show", id: green.id do
 						.ui.button.attached.button
 							%i.add.icon
 							View Profile
