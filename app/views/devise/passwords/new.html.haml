@@ -1,0 +1,17 @@
+=render 'layouts/header'
+%center
+	%br
+	%br
+	%br
+	.ui.form	
+		%h2 Forgot your password?
+		= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+			= devise_error_messages!
+			.field
+				= f.label :username
+			%br/
+			.ui.six.wide.field
+				= f.text_field :username
+			.actions
+				= f.submit "Send me reset password instructions" , :class =>'ui red button'
+		= render "devise/shared/links"
