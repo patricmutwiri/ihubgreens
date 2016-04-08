@@ -5,11 +5,19 @@
     %a.item Developers
     %a.item About
     .right.menu
+    / -unless admin_signed_in? 
+    /   =link_to "Account", edit_admin_registration_path
     -if green_signed_in?
-      .item 
+      .item  
         =link_to "Account" , edit_green_registration_path 
+
       .item
         =link_to "Sign Out" , destroy_green_session_path, method: :delete ,class: "ui green button"
+    -elsif admin_signed_in?
+      .item
+        =link_to "Account", edit_admin_registration_path
+      .item
+        =link_to "Sign Out" , destroy_admin_session_path, method: :delete ,class: "ui green button"
 
     -else
       .item

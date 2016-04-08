@@ -13,7 +13,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
-
+gem 'forem', :github => "radar/forem", :branch => "rails4"
+gem 'forem-bootstrap', :github => "radar/forem-bootstrap", :branch => "master"
+gem 'sprockets-rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

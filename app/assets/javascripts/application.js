@@ -13,6 +13,7 @@
 // Loads all Semantic javascripts
 //= require semantic-ui
 //= require jquery
+//= require forem
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
