@@ -28,4 +28,6 @@ class Green < ActiveRecord::Base
       end
     end
   end
+
+  has_many :project
 end
