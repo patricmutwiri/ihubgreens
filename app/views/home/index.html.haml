@@ -1,14 +1,30 @@
 =render 'layouts/header'
-%center
-	%br
-	%br
-	%h1 *iHub_ Greens
-	%h2.ui.center.aligned.icon.header
-		%i.circular.users.icon
+:css
+	.top{
+		margin-top: 5em;
+	}
 
-	%h4 Software
-	%p Elite software developers, the best designers, startup entrepreneurs and project managers bring their expertise to your project
-	%h4 Development
-	%p Elite developers, the best designers, startup entrepreneurs and project managers bring their expertise to your project
-	%h4 Consulting
-	%p Get answers to problems you never thought anyone would help you with
+.top
+	%div{align: 'center'}
+		= image_tag ("greens.png")
+		%h1 *iHub_ Greens
+
+	.top
+		.ui.center.aligned.container
+			.ui.center.aligned.grid
+				.four.wide.column
+					%h2.ui.center.aligned.icon.header
+						%i.circular.users.icon
+				.four.wide.column
+					%h2.ui.center.aligned.icon.header
+						%i.circular.settings.icon
+				.four.wide.column
+					%h2.ui.center.aligned.icon.header
+						%i.circular.spy.icon
+			.top
+				%h4 Software
+				%p Elite software developers, the best designers, startup entrepreneurs and project managers bring their expertise to your project
+				%h4 Development
+				%p Elite developers, the best designers, startup entrepreneurs and project managers bring their expertise to your project
+				%h4 Consulting
+				%p Get answers to problems you never thought anyone would help you with

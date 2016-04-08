@@ -1,21 +1,19 @@
 Rails.application.routes.draw do
-  get 'profile/show'
-
-  get 'static/about'
-
-  get 'home/index'
-
   devise_for :greens
 
   get 'about' => 'static#about', as: :about
   get 'greens' => 'static#greens', as: :greens
+  get 'profile' => 'profile#show', as: :profile
 
-  get 'profile' => 'static#show', as: :profile
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+
+  resources :projects
+
+  # post '/project/new'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
