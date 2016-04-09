@@ -1,0 +1,47 @@
+= form_for @startup do |f|
+  - if @startup.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@startup.errors.count, "error")} prohibited this startup from being saved:"
+      %ul
+        - @startup.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = image_tag @startup.image.url(:medium) 
+    %br/
+    = f.file_field :image
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :founder
+    = f.collection_select :green_id, Green.all, :id, :username
+    -#= collection_select(:startup, :green_id, Green.all, :id, :username, {}, {:multiple => false})
+  .field
+    = f.label :Industry
+    = f.collection_select :industry_id, Industry.all, :id, :name
+  .field
+    = f.label :website
+    = f.text_field :website
+  .field
+    = f.label :facebook
+    = f.text_field :facebook
+  .field
+    = f.label :twitter
+    = f.text_field :twitter
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :about
+    = f.text_area :about
+  .field
+    = f.label :founded
+    = f.number_field :founded
+  .field
+    = f.label :days_at_ihub
+    = f.number_field :days_at_ihub
+  .field
+    = f.label :employees
+    = f.number_field :employees
+  .actions
+    = f.submit 'Save'

@@ -5,6 +5,8 @@ class Green < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/person-flat.png"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
+
+  has_many :startups
   attr_accessor :login
   
   # Only allow letter, number, underscore and punctuation.

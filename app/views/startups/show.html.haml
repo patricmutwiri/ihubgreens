@@ -1,0 +1,36 @@
+%p#notice= notice
+%p
+  = image_tag @startup.image.url(:medium)
+%p
+  %b Name:
+  = @startup.name
+%p
+  %b Website:
+  = @startup.website
+%p
+  %b Facebook:
+  = @startup.facebook
+%p
+  %b Twitter:
+  = @startup.twitter
+%p
+  %b Email:
+  = @startup.email
+%p
+  %b About:
+  = @startup.about
+%p
+  %b Founded:
+  = @startup.founded
+%p
+  %b Days at ihub:
+  = @startup.days_at_ihub
+%p
+  %b Employees:
+  = @startup.employees
+
+= link_to 'Edit', edit_startup_path(@startup)
+\|
+= link_to 'Back', startups_path
+\|
+= link_to 'Delete', @startup, :method => :delete, :data => { :confirm => 'Are you sure?' }

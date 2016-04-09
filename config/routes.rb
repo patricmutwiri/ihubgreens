@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :industries
+  resources :startups
   get 'profile/show'
 
   get 'static/about'
