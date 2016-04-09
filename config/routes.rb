@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
   resources :industries
   resources :startups
   get 'profile/show'
@@ -7,9 +6,6 @@ Rails.application.routes.draw do
   get 'static/about'
 
   get 'home/index'
-
-=======
->>>>>>> 47f451d07f58939438524e782d92800ff3f2198d
   devise_for :greens
 
   get 'about' => 'static#about', as: :about
