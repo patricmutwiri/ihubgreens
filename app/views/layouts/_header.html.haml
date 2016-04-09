@@ -5,6 +5,13 @@
     -#%a.item Developers
     = link_to 'About', about_path, class: 'item'
     = link_to 'Startups', startups_path, class: 'item'
+    = link_to '*iHub_ greens', root_path, class: 'active item'
+
+    -if !green_signed_in?
+      = link_to 'Greens', greens_path, class: 'item'
+      = link_to 'About', about_path, class: 'item'
+    -else
+      = link_to 'project', new_project_path, class: 'item'
     .right.menu
     -if green_signed_in?
       .item 

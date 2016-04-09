@@ -1,0 +1,25 @@
+.ui.grid
+	.four.wide.column
+		.ui.form
+			= form_for @project do |f|
+				.field
+					= f.label :name
+					%br/
+					= f.text_field :name, autofocus: true
+				.field
+					= f.label :description
+					%br/
+					= f.text_area :description
+				.field
+					= f.label :link
+					%br/
+					= f.text_field :link
+
+				= f.hidden_field :green_id, value: current_green.id
+
+				.field
+					= f.submit "Save Project", class: 'ui button'
+	.twelve.wide.column
+
+
+		

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :industries
   resources :startups
   get 'profile/show'
@@ -7,17 +8,23 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
+=======
+>>>>>>> 47f451d07f58939438524e782d92800ff3f2198d
   devise_for :greens
 
   get 'about' => 'static#about', as: :about
   get 'greens' => 'static#greens', as: :greens
+  get 'profile' => 'profile#show', as: :profile
 
-  get 'profile' => 'static#show', as: :profile
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+
+  resources :projects
+
+  # post '/project/new'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
