@@ -1,16 +1,11 @@
 !!!
 %html
   %head
-    %title Ihubgreens
+    %title ihubgreens
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Oswald'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-   
+
   %body
     = yield
-
-
-  :javascript
-    $(document).ready(function(){
-      $(".rating").rating();
-    });

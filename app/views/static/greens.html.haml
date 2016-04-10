@@ -1,40 +1,18 @@
-=render 'layouts/header'
-:css
-	.top{
-		margin-top: 5em;
-	}
-
-.top
-	.ui.container
-		%div{align: 'center'}
-			%span
-				= image_tag("community.gif", :height => '100') 
-			%br/
-			%h3{style: 'font-size: 30px; font-family: ubuntu; color:green;'} Green Members
-
-		.ui.cards
+.container
+	.col-md-3
+		=render 'layouts/navigation'
+	.col-md-9
+		.row
 			- @greens.each do |green|
-				.ui.card{:style => "width: 200px"}
-					.content
-						.header
-							= green.names
-						.meta
-							= time_ago_in_words(green.created_at)
-						.description
-							.image{:align => "center"}
-								= image_tag green.avatar(:medium), :size => "150x150"
-
-							.extra
-								Rating:
-								.ui.star.rating{"data-rating" => "2"}
-
-							%hr/
-							
-							%p this is the user profile
-					
-					= link_to controller: "profile", action: "show", id: green.id do
-						.ui.button.attached.button
-							%i.add.icon
-							View Profile
-		-#= @green.count
-
+				.col-md-4
+					.card.hoverable
+						.card-image
+							.view.overlay.hm-white-slight
+								= image_tag green.avatar(:medium), class: 'img-responsive'
+								%a.mask.waves-effect
+						.card-content.text-center
+							%h5= green.names
+							/ rating bootstrap plugin to be added here
+							%p This is the user profile
+						.text-center
+							= link_to 'View Profile',profile_path(id: green.id), class: 'theme-green white-text waves-effect waves-light'

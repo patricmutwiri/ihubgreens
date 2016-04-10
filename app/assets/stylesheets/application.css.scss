@@ -13,4 +13,78 @@
  *= require_tree .
  *= require_self
  */
-@import "semantic-ui";
+
+body {
+  margin-top: 1rem;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Oswald', sans-serif;
+}
+
+.cover-page {
+  height: 100vh;
+}
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-green {
+  background-color: #2D9967;
+}
+.theme-yellow {
+  background-color: #EFE63A;
+}
+.theme-blue-dark {
+  background-color: #1B242B;
+}
+.theme-header {
+  font-family: 'Oswald', sans-serif;
+}
+
+.voffset  { margin-top: 2px; }
+.voffset-xxs { margin-top: 5px; }
+.voffset-xs { margin-top: 10px; }
+.voffset-s { margin-top: 20px; }
+.voffset-m { margin-top: 40px; }
+.voffset-l { margin-top: 60px; }
+
+.sidebar-nav-fixed {
+  width:20%;
+}
+
+ul > li > a {
+  color: white;
+
+  &:hover {
+  color: #2D9967;
+  }
+}
+
+.nav > li.active {
+  border-right: thick solid #EFE63A;
+}
+
+.card >div > a {
+  width: 100%;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+
+  &:hover {
+    background-color: #003019;
+  }
+}
+
+.card-image {
+  border-bottom: thin solid #eee;
+}
