@@ -1,10 +1,5 @@
-=render 'layouts/header'
-
-:css
-	.top{
-		margin-top: 5em;
-	}
-
-.top
-	.ui.container
-		= render 'form'
+.container
+  .col-md-3
+    =render 'layouts/navigation'
+  .col-md-9
+    = render 'form'
