@@ -1,17 +1,18 @@
-.sidebar-nav-fixed.affix
+.sidebar-nav-fixed.affix.voffset-xs
   .row
     .col-md-4
       = image_tag 'icons/logo.jpg'
     .col-md-8.theme-green.text-center.white-text
       %h4.h4-responsive.voffset-xs= @page_title ? @page_title : 'GREENS'
   .row.voffset-xxs
-    .col-md-12.theme-blue-dark.cover-page
+    .col-md-12.theme-blue-dark.height-port
       %ul.nav.voffset-l.theme-header
         -if green_signed_in?
           %li= link_to 'Forum'
           %li= link_to 'Profile'
 
-        %li= link_to 'Startups'
+        %li{class: "#{'active' if current_page? (startups_path)}"}
+          = link_to 'Startups', startups_path
         %li{class: "#{'active' if current_page? (greens_path)}"}
           = link_to 'Consultants', greens_path
         -if !green_signed_in?

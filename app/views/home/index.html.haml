@@ -1,29 +1,77 @@
-:css
-	.top{
-		margin-top: 5em;
-	}
+.height-port
+	.cover-page
+		.verticalcenter.white-text.text-center
+			= image_tag 'icons/logo.jpg', :class => 'block-line'
+			%h2.h2-responsive.block-line iHub Greens
+			.container-fluid
+				.row
+					.col-xs-2.col-xs-offset-5
+						= link_to 'learn more',{ :anchor => 'membership'}, :class => 'btn btn-default text-lowercase'
+	.container-fluid.cover-nav
+		.row{:style => "height: 100% !important;" }
+			.col-md-3.col-xs-6.col-sm-3.padding-horizontal-line
+				= link_to startups_path do
+					%h5.h5-responsive Startups
+			.col-md-3.col-xs-6.col-sm-3.padding-horizontal-line
+				= link_to greens_path do
+					%h5.h5-responsive Consultants
+			.col-md-3.col-xs-6.col-sm-3.padding-horizontal-line
+				= link_to do
+					%h5.h5-responsive Members
+			.col-md-3.col-xs-6.col-sm-3.padding-horizontal-line
+				= link_to do
+					%h5.h5-responsive Alumni
+.container.home
+	.row
+		.col-md-12
+			.text-center.voffset-l
+				= image_tag ("greens.png")
+				%h1 *iHub_ Greens
 
-.top
-	%div{align: 'center'}
-		= image_tag ("greens.png")
-		%h1 *iHub_ Greens
-
-	.top
-		.ui.center.aligned.container
-			.ui.center.aligned.grid
-				.four.wide.column
-					%h2.ui.center.aligned.icon.header
-						%i.circular.users.icon
-				.four.wide.column
-					%h2.ui.center.aligned.icon.header
-						%i.circular.settings.icon
-				.four.wide.column
-					%h2.ui.center.aligned.icon.header
-						%i.circular.spy.icon
-			.top
+			.text-center
 				%h4 Software
 				%p Elite software developers, the best designers, startup entrepreneurs and project managers bring their expertise to your project
 				%h4 Development
 				%p Elite developers, the best designers, startup entrepreneurs and project managers bring their expertise to your project
 				%h4 Consulting
 				%p Get answers to problems you never thought anyone would help you with
+.theme-green.home#membership
+	.container
+		.row
+			.col-md-8.col-md-offset-2
+				.text-center.voffset-l.white-text
+					%h3.h3-responsive GREEN MEMBERSHIP
+					%p
+						Green membership is for anyone who would like to make use of the iHub space and use it as their base as they work on exciting and innovative projects. Green members are looking to connect with other members of the iHub with different skill sets, which they require to see their project succeed. They are working to get their project to grow to where they have a minimum viable product or service and is ready for scaling.
+						%br/
+						%br/
+						Only white members can apply for green
+
+		.row
+			.col-md-10.col-md-offset-1
+				.row
+					.col-md-6
+						.white-text
+							%h5.h5-responsive GREEN MEMBER BENEFITS
+							%ul
+								%li RECEIVE WEEKLY NEWSLETTER
+								%li POST ON JOBS BOARD
+								%li FULL ACCESS TO THE IHUB SPACE FOR WORK RELATED EVENTS
+								%li PUBLICLY VIEWABLE WEB PROFILE
+								%li OFFICE HOURS WITH THE IHUB TEAM
+								%li ACCESS TO RESTRICTED IHUB EVENTS
+								%li GET SERVER SPACE FOR APPLICATION TESTING
+								%li ACCESS TO THE IHUB CLUSTER FOR HPC WORK
+								%li OPPORTUNITY TO LEAD AN IHUB SHOW & TELL SESSION ABOUT YOUR CURRENT PROJECT
+								%li ACCESS TO IHUB LIBRARY
+					.col-md-6
+						.white-text
+							%h5.h5-responsive REGISTRATION BENEFITS
+							%p
+								After six months all green members will default back to white members. Green Members can extend their registration for another six months
+							%h5.h5-responsive HOW TO APPLY
+							%p
+								Registration for Green/Red Members is a continuous process, we have a max capacity of 80/15 Green/Red Members in the space. Registered White members will receive a notification when there are openings. Once the Green Membership registration is open you will fill out the form and we will get back to you to confirm the interview date.
+								%br/
+								%br/
+								Green membership applicants will meet with some of the iHub team members. This will give the applicant a chance to learn more about green membership and the iHub community. We find that nothing can truly replace that face to face interaction especially for an applicant when determining if you really want to be part of the iHub community.

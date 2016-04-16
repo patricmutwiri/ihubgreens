@@ -1,3 +1,55 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.cover-page {
+  background: image-url('hero.jpg') no-repeat center bottom fixed;
+  height:80%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  img {
+    padding-bottom:1.424rem;
+  }
+
+  h2 {
+    border-bottom: thick solid;
+    padding-bottom: 0.38rem;
+  }
+}
+
+.cover-nav {
+  height: 20%;
+  a {
+    height:inherit !important;
+    padding: 1em;
+    background: #2E2E2E;
+    color: white;
+    &:hover {
+      background: #212121;
+    }
+  }
+}
+
+.padding-horizontal-line {
+  padding: 0 !important;
+  border: solid;
+  border-width: 0 1px;
+  height: inherit;
+}
+
+.home {
+  padding-bottom: 60px;
+
+  p {
+    margin-bottom: 25px;
+  }
+  li {
+    margin-bottom: 15px;
+  }
+}
+
+.block-line {
+  display:inline-block;
+}

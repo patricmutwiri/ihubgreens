@@ -15,7 +15,6 @@
  */
 
 body {
-  margin-top: 1rem;
   font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -23,8 +22,12 @@ h1, h2, h3, h4, h5 {
   font-family: 'Oswald', sans-serif;
 }
 
-.cover-page {
+.height-port {
   height: 100vh;
+}
+
+heigh-full {
+  height:100% !important;
 }
 
 .row {
